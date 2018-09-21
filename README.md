@@ -4,9 +4,9 @@ A simple command line application that returns the top 'n' Hacker News posts in 
 
 ## Prerequisites
 
-The program can be executed on any operating system (Linux, Windows, Mac OS X,). 
+The program can be executed on any operating system (Linux, Windows, Mac OS X). 
 
-The only requirement to run the it is to have Java 8 installed.
+The only requirement to run it is to have Java 8 installed.
 
 Make sure you're installing JDK 1.8.
 
@@ -70,8 +70,10 @@ where 'n' is the number of posts you want to print.
 
 ## Dockerfile
 
-Have a working version of Docker.
-Clone the repository and cd into that repository. 
+You need to have a working version of Docker running.
+
+Clone the repository and go into that repository. 
+
 Build the Docker image from the Dockerfile in the repository using the following command:
 
 ```
@@ -81,7 +83,7 @@ docker build -t <insert image name> .
 Then run it:
 
 ```
-docker run -it <name of image>
+docker run -it <image name>
 ```
 
 Now you can run the program using the following command:
@@ -92,22 +94,26 @@ java -jar hackernews.jar n
 
 where 'n' is the number of posts you want to print.
 
+
 ## Libraries used
 
-### jsoup - Java HTML Parser
-jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data.
-The library provides all the necessary functionality to get the required data from the html pages and is quite easy to use. Actually it's the first time I used this library, after some researches and readings I decided to choose the most recommended :)
+### Jsoup 
+Jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data.
+The library provides all the necessary functionality to get the required data from the html pages and is quite easy to use. It's the first time I use this library, after some researches and readings I decided to choose the most recommended one.
 
 
-### org.json
-pretty much obvious. I used this library to create the output in the requested format.
+### Json
+I used this library to create the output in the requested format.
 
 
 ### JUnit5
 
-I always used JUnit to test Java applications, so I'm quite familiar with it. The integration provided by Eclipse makes the unit tests creation and setup even easier.
+I've always used JUnit to test Java applications, so I'm quite familiar with it. The integration provided by Eclipse makes the unit tests creation and setup even easier.
+
 In order to test the application I created a mocked html file, which contains a modified version of the Hacker News html page.
-It contains 10 posts, some of them are correct, others have titles too long, negative points, empty author, etc.
+
+It contains 10 posts, some of them are correct, others have "problems", like titles too long, negative points, empty author, etc.
+
 I created a suite of tests to ensure the parser works fine in all these cases.
 The test folder contains the 'test.html' file and the test class.
 
