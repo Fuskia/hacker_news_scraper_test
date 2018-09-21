@@ -95,7 +95,7 @@ java -jar hackernews.jar n
 where 'n' is the number of posts you want to print.
 
 
-## Libraries used
+## Libraries
 
 ### Jsoup 
 Jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data.
