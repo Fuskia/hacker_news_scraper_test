@@ -62,7 +62,6 @@ $ sudo update-alternatives --config java
 
 Java packages and instructions for installation are available from the Oracle website.
 
-```
 
 ## How to run
 
