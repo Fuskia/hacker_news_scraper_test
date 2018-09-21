@@ -10,7 +10,7 @@ The only requirement to run the it is to have Java 8 installed.
 
 Make sure you're installing JDK 1.8.
 
-###Checking the Java version
+### Checking the Java version
 
 Open a terminal:
 
@@ -30,9 +30,9 @@ Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
 ```
 
-###Installing Java
+### Installing Java
 
-####For Windows users
+#### For Windows users
 
 If the required version of Java is not installed on your computer:
 
@@ -40,7 +40,7 @@ Download it from the Oracle website (Java 8) and choose the appropriate platform
 Run the downloaded .exe file and follow the instructions displayed.
 
 
-####For Linux users
+#### For Linux users
 
 You can download Java 8 from Oracle website (choose the right architecture). You can find RPM and TGZ packages to install. If you use Ubuntu the following is a better method:
 
@@ -58,7 +58,7 @@ In case you have another JDK installed (like GCJ), you can select the right one 
 $ sudo update-alternatives --config java
 ```
 
-####For Mac OS X Users
+#### For Mac OS X Users
 
 Java packages and instructions for installation are available from the Oracle website.
 
@@ -78,16 +78,16 @@ where 'n' is the number of posts you want to print.
 
 ## Libraries used
 
-###jsoup - Java HTML Parser
+### jsoup - Java HTML Parser
 jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data.
 The library provides all the necessary functionality to get the required data from the html pages and is quite easy to use. Actually it's the first time I used this library, after some researches and readings I decided to choose the most recommended :)
 
 
-###org.json
+### org.json
 pretty much obvious. I used this library to create the output in the requested format.
 
 
-###JUnit5
+### JUnit5
 
 I always used JUnit to test Java applications, so I'm quite familiar with it. The integration provided by Eclipse makes the unit tests creation and setup even easier.
 In order to test the application I created a mocked html file, which contains a modified version of the Hacker News page.
