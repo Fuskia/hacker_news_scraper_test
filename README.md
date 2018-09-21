@@ -12,22 +12,16 @@ Make sure you're installing JDK 1.8.
 
 ### Checking the Java version
 
-Open a terminal:
-
-#### On Linux or Mac OS X: 
-open a terminal.
-
-#### On Windows: 
-press "windows" key + r, type cmd (or command) in the Run window and press "OK" or open the "Prompt command" from "Start > Programs > Accessories" menu.
+Open a terminal.
 
 Type 'java -version' and press Enter.
 
 If Java is correctly installed on your computer, the name and version of the Java virtual machine is displayed:
 
 ```
-Java version "1.8.0_31"
-Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
+java version "1.8.0_171"
+Java(TM) SE Runtime Environment (build 1.8.0_171-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 ```
 
 ### Installing Java
@@ -74,6 +68,29 @@ java -jar hackenews.jar n
 
 where 'n' is the number of posts you want to print.
 
+## Dockerfile
+
+Have a working version of Docker.
+Clone the repository and cd into that repository. 
+Build the Docker image from the Dockerfile in the repository using the following command:
+
+```
+docker build -t <insert image name> .
+```
+
+Then run it:
+
+```
+docker run -it <name of image>
+```
+
+Now you can run the program using the following command:
+
+```
+java -jar hackernews.jar n
+```
+
+where 'n' is the number of posts you want to print.
 
 ## Libraries used
 
@@ -89,9 +106,9 @@ pretty much obvious. I used this library to create the output in the requested f
 ### JUnit5
 
 I always used JUnit to test Java applications, so I'm quite familiar with it. The integration provided by Eclipse makes the unit tests creation and setup even easier.
-In order to test the application I created a mocked html file, which contains a modified version of the Hacker News page.
+In order to test the application I created a mocked html file, which contains a modified version of the Hacker News html page.
 It contains 10 posts, some of them are correct, others have titles too long, negative points, empty author, etc.
-I create a suite of tests to ensure the parser works fine in all these cases.
+I created a suite of tests to ensure the parser works fine in all these cases.
 The test folder contains the 'test.html' file and the test class.
 
 
