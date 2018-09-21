@@ -109,11 +109,8 @@ I used this library to create the output in the requested format.
 ### JUnit5
 
 I've always used JUnit to test Java applications, so I'm quite familiar with it. The integration provided by Eclipse makes the unit tests creation and setup even easier.
-
 In order to test the application I created a mocked html file, which contains a modified version of the Hacker News html page.
-
 It contains 10 posts, some of them are correct, others have "problems", like titles too long, negative points, empty author, etc.
-
 I created a suite of tests to ensure the parser works fine in all these cases.
 The test folder contains the 'test.html' file and the test class.
 
